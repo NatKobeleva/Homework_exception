@@ -13,6 +13,11 @@ public class ShopRepository {
     }
 
     public void add(Product product) {
+        for (Product i : products) {
+            if (i.getId() == product.getId()) {
+                throw new AlreadyExistsException("ID продуктов совпадает");
+            }
+        }
         products = addToArray(products, product);
     }
 
