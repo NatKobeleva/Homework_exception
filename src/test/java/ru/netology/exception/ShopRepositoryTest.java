@@ -22,7 +22,7 @@ public class ShopRepositoryTest {
     }
 
     @Test
-    public void testException() {
+    public void shouldThrowExceptionIfIdMatchesWhenRemove() {
         ShopRepository repo = new ShopRepository();
         Product product1 = new Product(12, "стол", 13_000);
         Product product2 = new Product(16, "кровать", 34_000);
@@ -55,7 +55,7 @@ public class ShopRepositoryTest {
     }
 
     @Test
-    public void testExceptionIfIdMatches() {
+    public void testExceptionIfIdMatchesWhenAdd() {
         ShopRepository repo = new ShopRepository();
         Product product1 = new Product(12, "стол", 13_000);
         Product product2 = new Product(16, "кровать", 34_000);
